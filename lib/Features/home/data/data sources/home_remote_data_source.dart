@@ -1,6 +1,8 @@
 import 'package:bookly/Features/home/data/models/book_model/book_model.dart';
 import 'package:bookly/Features/home/domain/entites/book_entity.dart';
+import 'package:bookly/constants.dart';
 import 'package:bookly/core/utils/api_service.dart';
+import 'package:hive/hive.dart';
 
 abstract class HomeRemoteDataSource {
   Future<List<BookEntity>> fetchFeaturedBooks();
@@ -19,7 +21,14 @@ class HomeRepoDataSourceImpl extends HomeRemoteDataSource {
 
     List<BookEntity> books = getBooksList(data);
 
+    saveBoxData(books, kFeaturedBox);
+
     return books;
+  }
+
+  void saveBoxData(List<BookEntity> books, String boxName) {
+    var box = Hive.box(boxName);
+    box.addAll(books);
   }
 
   @override
