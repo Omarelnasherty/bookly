@@ -1,7 +1,7 @@
-import 'package:bookly/Features/home/data/models/book_model/image_links..dart';
-import 'package:bookly/Features/home/data/models/book_model/industry_identifier..dart';
-import 'package:bookly/Features/home/data/models/book_model/panelization_summary..dart';
-import 'package:bookly/Features/home/data/models/book_model/reading_modes..dart';
+import 'image_links.dart';
+import 'industry_identifier.dart';
+import 'panelization_summary.dart';
+import 'reading_modes.dart';
 
 class VolumeInfo {
   String? title;
@@ -11,7 +11,7 @@ class VolumeInfo {
   String? description;
   List<IndustryIdentifier>? industryIdentifiers;
   ReadingModes? readingModes;
-  num? pageCount;
+  int? pageCount;
   String? printType;
   List<String>? categories;
   String? maturityRating;
