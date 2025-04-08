@@ -13,6 +13,7 @@ void main() async {
   Hive.registerAdapter(BookEntityAdapter());
 
   await Hive.openBox(kFeaturedBox);
+  await Hive.openBox(kNewestBox);
 }
 
 class Bookly extends StatelessWidget {
