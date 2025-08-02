@@ -1,4 +1,4 @@
-import 'package:bookly/Features/home/domain/entites/book_entity.dart';
+import 'package:bookly/Features/home/domain/entities/book_entity.dart';
 
 import 'access_info.dart';
 import 'sale_info.dart';
@@ -25,45 +25,40 @@ class BookModel extends BookEntity {
     this.accessInfo,
     this.searchInfo,
   }) : super(
-         image: volumeInfo?.imageLinks?.thumbnail ?? '',
-         title: volumeInfo!.title!,
-         authorName: volumeInfo.authors!.first,
-         price: 0.0,
-         maturityRating: volumeInfo.maturityRating!,
-         bookId: id!,
-       );
+            bookId: id!,
+            image: volumeInfo?.imageLinks?.thumbnail ?? '',
+            authorName: volumeInfo?.authors?.first ?? 'No Name',
+            price: 0.0,
+            rating: volumeInfo!.averageRating,
+            title: volumeInfo.title!);
 
   factory BookModel.fromJson(Map<String, dynamic> json) => BookModel(
-    kind: json['kind'] as String?,
-    id: json['id'] as String?,
-    etag: json['etag'] as String?,
-    selfLink: json['selfLink'] as String?,
-    volumeInfo:
-        json['volumeInfo'] == null
+        kind: json['kind'] as String?,
+        id: json['id'] as String?,
+        etag: json['etag'] as String?,
+        selfLink: json['selfLink'] as String?,
+        volumeInfo: json['volumeInfo'] == null
             ? null
             : VolumeInfo.fromJson(json['volumeInfo'] as Map<String, dynamic>),
-    saleInfo:
-        json['saleInfo'] == null
+        saleInfo: json['saleInfo'] == null
             ? null
             : SaleInfo.fromJson(json['saleInfo'] as Map<String, dynamic>),
-    accessInfo:
-        json['accessInfo'] == null
+        accessInfo: json['accessInfo'] == null
             ? null
             : AccessInfo.fromJson(json['accessInfo'] as Map<String, dynamic>),
-    searchInfo:
-        json['searchInfo'] == null
+        searchInfo: json['searchInfo'] == null
             ? null
             : SearchInfo.fromJson(json['searchInfo'] as Map<String, dynamic>),
-  );
+      );
 
   Map<String, dynamic> toJson() => {
-    'kind': kind,
-    'id': id,
-    'etag': etag,
-    'selfLink': selfLink,
-    'volumeInfo': volumeInfo?.toJson(),
-    'saleInfo': saleInfo?.toJson(),
-    'accessInfo': accessInfo?.toJson(),
-    'searchInfo': searchInfo?.toJson(),
-  };
+        'kind': kind,
+        'id': id,
+        'etag': etag,
+        'selfLink': selfLink,
+        'volumeInfo': volumeInfo?.toJson(),
+        'saleInfo': saleInfo?.toJson(),
+        'accessInfo': accessInfo?.toJson(),
+        'searchInfo': searchInfo?.toJson(),
+      };
 }

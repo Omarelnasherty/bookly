@@ -1,15 +1,17 @@
-import 'package:bookly/Features/home/domain/repos/home_repo.dart';
-import 'package:bookly/core/erors/failure.dart';
 import 'package:dartz/dartz.dart';
 
-import '../entites/book_entity.dart';
+import '../../../../core/errors/failure.dart';
+import '../../../../core/use_cases/use_case.dart';
+import '../entities/book_entity.dart';
+import '../repos/home_repo.dart';
 
-class FetchNewestBooksUseCases {
+class FetchNewestdBooksUseCase extends UseCase<List<BookEntity>, NoParam> {
   final HomeRepo homeRepo;
 
-  FetchNewestBooksUseCases(this.homeRepo);
+  FetchNewestdBooksUseCase(this.homeRepo);
 
-  Future<Either<Failure, List<BookEntity>>> fetchNewestBooks() {
-    return homeRepo.fetchNewestBooks();
+  @override
+  Future<Either<Failure, List<BookEntity>>> call([NoParam? param]) async {
+    return await homeRepo.fetchNewestBooks();
   }
 }

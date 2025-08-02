@@ -1,5 +1,4 @@
 import 'package:hive/hive.dart';
-
 part 'book_entity.g.dart';
 
 @HiveType(typeId: 0)
@@ -15,14 +14,13 @@ class BookEntity {
   @HiveField(4)
   final num? price;
   @HiveField(5)
-  final String? maturityRating;
+  final num? rating;
 
-  BookEntity({
-    required this.image,
-    required this.title,
-    required this.authorName,
-    required this.price,
-    required this.maturityRating,
-    required this.bookId,
-  });
+  BookEntity(
+      {required this.image,
+      required this.title,
+      required this.authorName,
+      required this.price,
+      required this.rating,
+      required this.bookId});
 }

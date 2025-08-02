@@ -2,7 +2,10 @@ class PanelizationSummary {
   bool? containsEpubBubbles;
   bool? containsImageBubbles;
 
-  PanelizationSummary({this.containsEpubBubbles, this.containsImageBubbles});
+  PanelizationSummary({
+    this.containsEpubBubbles,
+    this.containsImageBubbles,
+  });
 
   factory PanelizationSummary.fromJson(Map<String, dynamic> json) {
     return PanelizationSummary(
@@ -12,7 +15,7 @@ class PanelizationSummary {
   }
 
   Map<String, dynamic> toJson() => {
-    'containsEpubBubbles': containsEpubBubbles,
-    'containsImageBubbles': containsImageBubbles,
-  };
+        'containsEpubBubbles': containsEpubBubbles,
+        'containsImageBubbles': containsImageBubbles,
+      };
 }
