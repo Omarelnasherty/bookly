@@ -6,7 +6,7 @@ Bookly is a Flutter application built as a hands-on implementation of a complete
 
 
 
-# 🚀 Why This Project?
+## 🚀 Why This Project?
 This project was developed as a practical application of knowledge gained through advanced Flutter training. It demonstrates how to:
 
 * Convert Figma UI into real-world Flutter interfaces
@@ -18,7 +18,7 @@ This project was developed as a practical application of knowledge gained throug
 * Build apps with real-world APIs (Google Books)
 
   
-# ✨ Main Features
+## ✨ Main Features
 * 📖 Beautiful home layout with Featured and Newest books
 
 * 📘 Book preview and details screen with smooth transitions
@@ -32,7 +32,7 @@ This project was developed as a practical application of knowledge gained throug
 * 🧼 Organized with Clean Architecture & feature-first structure
 
 
-# 🧠 Clean Architecture + Folder Structure
+## 🧠 Clean Architecture + Folder Structure
 
 This project was built with a layered architecture in mind. The folder structure reflects a modular, testable, and scalable approach:
 <pre> 
@@ -104,7 +104,7 @@ This project was built with a layered architecture in mind. The folder structure
                     splash_view_body.dart
 </pre>
 
-# 🚀 What Was Implemented
+## 🚀 What Was Implemented
 * ✅ Dependency injection using get_it
 * ✅ API integration using Dio
 * ✅ State management using Cubit
@@ -115,7 +115,7 @@ This project was built with a layered architecture in mind. The folder structure
 * ✅ Loading, error, and empty states handling
 
 
-# 🧪 How to Run
+## 🧪 How to Run
 <pre>
 git clone https://github.com/Omarelnasherty/bookly.git
 cd bookly
