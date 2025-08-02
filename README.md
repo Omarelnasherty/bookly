@@ -1,16 +1,129 @@
-# flutter_application_1
 
-A new Flutter project.
+# 📚 Bookly – Flutter Clean Architecture App
+Bookly is a Flutter application built as a hands-on implementation of a complete mobile app UI from a Figma design. This project reflects a deep understanding of clean code principles, layered architecture, and professional app structure, making it an ideal showcase of applying theory into real development.
 
-## Getting Started
+⚙️ The app is not a clone or a copy, but a structured, customized implementation based on a design — built from scratch as part of a personal learning journey focused on building scalable and maintainable Flutter apps.
 
-This project is a starting point for a Flutter application.
 
-A few resources to get you started if this is your first Flutter project:
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+# 🚀 Why This Project?
+This project was developed as a practical application of knowledge gained through advanced Flutter training. It demonstrates how to:
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+* Convert Figma UI into real-world Flutter interfaces
+
+* Apply the Clean Architecture pattern
+
+* Write reusable, testable, and scalable code
+
+* Build apps with real-world APIs (Google Books)
+
+  
+# ✨ Main Features
+* 📖 Beautiful home layout with Featured and Newest books
+
+* 📘 Book preview and details screen with smooth transitions
+
+* 📱 Responsive layout supporting different screen sizes
+
+* 🧠 Bloc/Cubit state management (flutter_bloc)
+
+* 🌐 Integration with Google Books API
+
+* 🧼 Organized with Clean Architecture & feature-first structure
+
+
+# 🧠 Clean Architecture + Folder Structure
+
+This project was built with a layered architecture in mind. The folder structure reflects a modular, testable, and scalable approach:
+<pre> 
+  +---lib
+    |   constants.dart
+    |   main.dart
+    |
+    +---core
+    |   +---errors
+    |   |       failures.dart
+    |   |
+    |   +---utils
+    |   |   |   api_service.dart
+    |   |   |   app_router.dart
+    |   |   |   assets.dart
+    |   |   |   service_locator.dart
+    |   |   |   styles.dart
+    |   |   |
+    |   |   +---function
+    |   |           custom_snack_bar.dart
+    |   |           launch_url.dart
+    |   |
+    |   +---widgets
+    |           custom_button.dart
+    |           custom_error_widget.dart
+    |           custom_loading_indicator.dart
+    |
+    +---Features
+        +---home
+        |   +---data
+        |   |   +---models
+        |   |   |   +---book_model
+        |   |   |       access_info.dart
+        |   |   |       book_model.dart
+        |   |   |       ...
+        |   |   +---repos
+        |   |       home_repo.dart
+        |   |       home_repo_impl.dart
+        |   |
+        |   +---presentation
+        |       +---manger
+        |       |   +---featured_books_cubit
+        |       |   +---newest_books_cubit
+        |       |   +---smila_books_cubit
+        |       |
+        |       +---views
+        |       |   book_details_view.dart
+        |       |   home_view.dart
+        |       |
+        |       +---widgets
+        |           best_seller_list_view.dart
+        |           book_details_view_body.dart
+        |           ...
+        |
+        +---search
+        |   +---presentation
+        |       +---views
+        |       |   search_view.dart
+        |       +---widgets
+        |           custom_search_text_field.dart
+        |           search_view_body.dart
+        |
+        +---Splash
+            +---presentation
+                +---views
+                |   splash_view.dart
+                +---widgets
+                    sliding_text.dart
+                    splash_view_body.dart
+</pre>
+
+# 🚀 What Was Implemented
+* ✅ Dependency injection using get_it
+* ✅ API integration using Dio
+* ✅ State management using Cubit
+* ✅ Modular widgets and reusable components
+* ✅ Navigation handled via a custom AppRouter
+* ✅ Clean separation of logic and UI
+* ✅ Professional UI implementation from Figma
+* ✅ Loading, error, and empty states handling
+
+
+# 🧪 How to Run
+<pre>
+git clone https://github.com/Omarelnasherty/bookly.git
+cd bookly
+flutter pub get
+flutter run
+</pre>
+
+
+
+
+
