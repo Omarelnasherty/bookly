@@ -1,4 +1,16 @@
 
+## 📸 Screenshots
+
+Below are some key screens from the **Bookly** app, showcasing its clean architecture and core features.
+
+<p align="center">
+  <img src="assets/images/1.png" width="300" style="max-width: 45%; margin-right: 10px;" alt="Clean Architecture" />
+  <img src="assets/images/2.png" width="300" style="max-width: 45%;" alt="App Screens" />
+</p>
+
+
+
+
 # 📚 Bookly – Flutter Clean Architecture App
 Bookly is a Flutter application built as a hands-on implementation of a complete mobile app UI from a Figma design. This project reflects a deep understanding of clean code principles, layered architecture, and professional app structure, making it an ideal showcase of applying theory into real development.
 
